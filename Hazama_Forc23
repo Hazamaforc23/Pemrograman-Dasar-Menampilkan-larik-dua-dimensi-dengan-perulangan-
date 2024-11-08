@@ -1,0 +1,45 @@
+#include <stdio.h>                                                              // fungsinya untuk input-output
+
+int main ()
+{
+    int array2D [5] [2] = { { 1 ,12}, {2 ,22} , { 3 ,33} , {4 ,44} , {5 ,55} }; // Deklarasi array2D berukuran 5x2 dan inisial lainya
+    
+    int i , j;                                                                  // Deklarasi Variabel i dan j untuk iterasi(proses pengulangan untuk menghasilkan serangkaian hasil pada Loop
+
+
+    for (i =0; i < 5; i ++)                                                     // Iterasi untuk setiap baris
+{
+        for (j =0; j < 2; j ++)                                                 // Iterasi untuk setiap kolom
+    {
+        printf (" array2D [ %d ] [ %d ] = %d\n", i , j , array2D [i] [j]);      // Menampilkan nilai array pada baris i dan j dengan indeks yang sesuai
+    }
+}
+
+printf ("\n");
+    for (i =0; i < 5; i ++)                                                     // menampilkan elemen array dalam format matriks menggunakan for-loop 
+{
+         for (j =0; j < 2; j ++)                                                // loop untuk setiap kolom
+    {
+        printf (" %d ", array2D [i] [j]);
+    }
+    printf ("\n");                                                              // fungsinya untuk pindah baris ke berikutnya setelah setiap baris selesai
+}
+
+printf ("\n");
+
+    i =0;                                                                       // menampilkan elemen array dalam format matriks menggunakan while-loop
+        while (i < 5 )                                                          // Loop untuk setiap baris
+        {
+            j =0 ;                                                              // Inisial nilai j untuk setiap baris
+            while (j < 2)                                                       // Loop untuk setiap kolom
+            {
+                printf ( "%d", array2D [i] [j]);                                // Menampilkan nilai elemen array pada baris i dan kolom j
+                j ++;                                                           // Increment(penambahan otomatis) kolom
+            }
+            
+            i ++;                                                               // Increment(penambahan otomatis) baris setelah setiap kolom selesai
+            printf ("\n");                                                      // Pindah ke baris berikutnya
+            
+        }
+        return 0;                                                               // Mengembalikan 0 untuk menunjukan program berjalan dengan sukses
+}
